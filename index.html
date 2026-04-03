@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Çmimet e Naftës në Botë</title>
+<title>Çmimet e Naftës & Crypto | skill.gezimm.com</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap');
-:root{--bg:#050a0f;--bg2:#0a1420;--bg3:#0f1e2e;--amber:#f0a500;--amber2:#ffc844;--red:#ff4444;--green:#00c97a;--text:#c8d8e8;--muted:#4a6070;--border:#1a2d40}
+:root{--bg:#050a0f;--bg2:#0a1420;--bg3:#0f1e2e;--amber:#f0a500;--amber2:#ffc844;--red:#ff4444;--green:#00c97a;--purple:#a855f7;--blue:#3b82f6;--text:#c8d8e8;--muted:#4a6070;--border:#1a2d40}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:40px 40px;opacity:.4;pointer-events:none;z-index:0}
@@ -15,15 +15,15 @@ header{border-bottom:1px solid var(--border);padding:24px 0 20px;background:line
 .header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .logo-area{display:flex;align-items:center;gap:16px}
 .oil-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--amber),#c07800);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 20px rgba(240,165,0,.3)}
-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,46px);letter-spacing:2px;color:#fff;line-height:1}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4vw,42px);letter-spacing:2px;color:#fff;line-height:1}
 .subtitle{font-size:12px;color:var(--muted);letter-spacing:1px;margin-top:3px;text-transform:uppercase}
-.header-right{display:flex;align-items:center;gap:16px}
+.header-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .live-badge{display:flex;align-items:center;gap:6px;background:rgba(0,201,122,.1);border:1px solid rgba(0,201,122,.3);border-radius:20px;padding:4px 12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--green);letter-spacing:2px}
 .live-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:blink 1.2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 #last-updated{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--muted)}
 .ticker-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:8px 0;overflow:hidden;white-space:nowrap}
-.ticker-track{display:inline-flex;gap:40px;animation:ticker 30s linear infinite}
+.ticker-track{display:inline-flex;gap:40px;animation:ticker 40s linear infinite}
 .ticker-item{font-family:'Share Tech Mono',monospace;font-size:12px;display:flex;align-items:center;gap:8px}
 .ticker-item .name{color:var(--muted)}.ticker-item .val{color:var(--amber)}
 .chg.up{color:var(--green)}.chg.dn{color:var(--red)}
@@ -31,19 +31,23 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,46px);letter-spa
 main{padding:32px 0}
 .section-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
-.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:40px}
+.section-label.crypto-label{color:var(--purple)}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:40px}
 .price-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;position:relative;overflow:hidden;transition:border-color .3s,transform .2s;cursor:default}
 .price-card:hover{border-color:var(--amber);transform:translateY(-2px)}
+.price-card.crypto-card:hover{border-color:var(--purple)}
 .price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--amber),transparent)}
+.price-card.crypto-card::before{background:linear-gradient(90deg,var(--purple),transparent)}
 .card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
 .commodity-name{font-size:12px;font-weight:600;letter-spacing:1px;color:var(--text);text-transform:uppercase}
 .commodity-code{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);margin-top:2px}
-.commodity-icon{font-size:24px;opacity:.6}
-.price-main{font-family:'Bebas Neue',sans-serif;font-size:42px;color:#fff;letter-spacing:1px;line-height:1;margin-bottom:8px}
-.price-unit{font-size:13px;color:var(--muted);font-family:'Share Tech Mono',monospace;margin-bottom:12px}
+.commodity-icon{font-size:24px;opacity:.7}
+.price-main{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#fff;letter-spacing:1px;line-height:1;margin-bottom:8px}
+.price-unit{font-size:12px;color:var(--muted);font-family:'Share Tech Mono',monospace;margin-bottom:12px}
 .price-change{display:flex;align-items:center;gap:6px;font-family:'Share Tech Mono',monospace;font-size:13px}
 .price-change.up{color:var(--green)}.price-change.dn{color:var(--red)}
 .sparkline{margin-top:16px}.sparkline svg{width:100%;height:40px}
+.mcap{font-size:10px;color:var(--muted);margin-top:8px;font-family:'Share Tech Mono',monospace}
 .regions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:40px}
 .region-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px}
 .region-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
@@ -52,12 +56,15 @@ main{padding:32px 0}
 .region-bar{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--amber),var(--amber2))}
 .region-pct{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--amber)}
 .region-label{font-size:10px;color:var(--muted);letter-spacing:1px}
-.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:40px}
 .stat-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
-.stat-val{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--amber2);line-height:1}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--amber2);line-height:1}
 .stat-label{font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:4px;text-transform:uppercase}
+.crypto-stats .stat-val{color:var(--purple)}
 footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;font-size:11px;color:var(--muted);letter-spacing:1px;font-family:'Share Tech Mono',monospace}
 footer span{color:var(--amber)}
+.api-status{font-size:10px;color:var(--muted);font-family:'Share Tech Mono',monospace;margin-left:8px}
+.api-status.live{color:var(--green)}.api-status.sim{color:var(--amber)}
 </style>
 </head>
 <body>
@@ -67,8 +74,8 @@ footer span{color:var(--amber)}
       <div class="logo-area">
         <div class="oil-icon">⛽</div>
         <div>
-          <h1>Çmimet e Naftës në Botë</h1>
-          <div class="subtitle">Monitorim i tregut global të energjisë • Çmime në kohë reale</div>
+          <h1>Çmimet e Naftës & Crypto</h1>
+          <div class="subtitle">Monitorim i tregut global • Energji & Kriptovaluta</div>
         </div>
       </div>
       <div class="header-right">
@@ -78,23 +85,32 @@ footer span{color:var(--amber)}
     </div>
   </div>
 </header>
+
 <div class="ticker-bar">
-  <div class="ticker-track">
+  <div class="ticker-track" id="ticker-track">
     <div class="ticker-item"><span class="name">BRENT</span><span class="val" id="t-brent">$73.50</span><span class="chg up" id="t-brent-c">▲+0.82%</span></div>
     <div class="ticker-item"><span class="name">WTI</span><span class="val" id="t-wti">$69.80</span><span class="chg dn" id="t-wti-c">▼-0.45%</span></div>
+    <div class="ticker-item"><span class="name">BTC</span><span class="val" id="t-btc">$83,241</span><span class="chg up" id="t-btc-c">▲+1.24%</span></div>
+    <div class="ticker-item"><span class="name">ETH</span><span class="val" id="t-eth">$1,842</span><span class="chg dn" id="t-eth-c">▼-0.83%</span></div>
+    <div class="ticker-item"><span class="name">BNB</span><span class="val" id="t-bnb">$584</span><span class="chg up" id="t-bnb-c">▲+0.51%</span></div>
+    <div class="ticker-item"><span class="name">SOL</span><span class="val" id="t-sol">$124</span><span class="chg dn" id="t-sol-c">▼-1.20%</span></div>
     <div class="ticker-item"><span class="name">NAT GAS</span><span class="val" id="t-gas">$3.42</span><span class="chg up" id="t-gas-c">▲+1.17%</span></div>
-    <div class="ticker-item"><span class="name">HTG OIL</span><span class="val" id="t-htg">$2.18</span><span class="chg dn" id="t-htg-c">▼-0.23%</span></div>
-    <div class="ticker-item"><span class="name">OPEC+</span><span class="val">$74.10</span><span class="chg up">▲+0.60%</span></div>
+    <!-- duplicate -->
     <div class="ticker-item"><span class="name">BRENT</span><span class="val">$73.50</span><span class="chg up">▲+0.82%</span></div>
     <div class="ticker-item"><span class="name">WTI</span><span class="val">$69.80</span><span class="chg dn">▼-0.45%</span></div>
+    <div class="ticker-item"><span class="name">BTC</span><span class="val">$83,241</span><span class="chg up">▲+1.24%</span></div>
+    <div class="ticker-item"><span class="name">ETH</span><span class="val">$1,842</span><span class="chg dn">▼-0.83%</span></div>
+    <div class="ticker-item"><span class="name">BNB</span><span class="val">$584</span><span class="chg up">▲+0.51%</span></div>
+    <div class="ticker-item"><span class="name">SOL</span><span class="val">$124</span><span class="chg dn">▼-1.20%</span></div>
     <div class="ticker-item"><span class="name">NAT GAS</span><span class="val">$3.42</span><span class="chg up">▲+1.17%</span></div>
-    <div class="ticker-item"><span class="name">HTG OIL</span><span class="val">$2.18</span><span class="chg dn">▼-0.23%</span></div>
-    <div class="ticker-item"><span class="name">OPEC+</span><span class="val">$74.10</span><span class="chg up">▲+0.60%</span></div>
   </div>
 </div>
+
 <main>
   <div class="container">
-    <div class="section-label">Çmimet kryesore</div>
+
+    <!-- OIL SECTION -->
+    <div class="section-label">Çmimet e naftës & energjisë</div>
     <div class="price-grid">
       <div class="price-card">
         <div class="card-header"><div><div class="commodity-name">Nafta Brent</div><div class="commodity-code">ICE · USD/BBL</div></div><div class="commodity-icon">🛢️</div></div>
@@ -121,7 +137,67 @@ footer span{color:var(--amber)}
         <div class="sparkline"><svg id="s-htg" viewBox="0 0 200 40" preserveAspectRatio="none"></svg></div>
       </div>
     </div>
-    <div class="section-label">Prodhimi rajonal • Milion fuçi/ditë</div>
+
+    <!-- CRYPTO SECTION -->
+    <div class="section-label crypto-label">Kriptovalutat — CoinGecko API <span class="api-status" id="api-status">duke u lidhur...</span></div>
+    <div class="price-grid">
+      <div class="price-card crypto-card">
+        <div class="card-header"><div><div class="commodity-name">Bitcoin</div><div class="commodity-code">BTC · Coinbase · Binance</div></div><div class="commodity-icon">₿</div></div>
+        <div class="price-main" id="p-btc">83,241</div><div class="price-unit">USD / BTC</div>
+        <div class="price-change up" id="c-btc">▲ +1,016 (+1.24%)</div>
+        <div class="sparkline"><svg id="s-btc" viewBox="0 0 200 40" preserveAspectRatio="none"></svg></div>
+        <div class="mcap" id="m-btc">Kap. tregu: $1.64T</div>
+      </div>
+      <div class="price-card crypto-card">
+        <div class="card-header"><div><div class="commodity-name">Ethereum</div><div class="commodity-code">ETH · Coinbase · Binance</div></div><div class="commodity-icon">⟠</div></div>
+        <div class="price-main" id="p-eth">1,842</div><div class="price-unit">USD / ETH</div>
+        <div class="price-change dn" id="c-eth">▼ -15.4 (-0.83%)</div>
+        <div class="sparkline"><svg id="s-eth" viewBox="0 0 200 40" preserveAspectRatio="none"></svg></div>
+        <div class="mcap" id="m-eth">Kap. tregu: $221B</div>
+      </div>
+      <div class="price-card crypto-card">
+        <div class="card-header"><div><div class="commodity-name">BNB</div><div class="commodity-code">BNB · Binance Smart Chain</div></div><div class="commodity-icon">🔶</div></div>
+        <div class="price-main" id="p-bnb">584</div><div class="price-unit">USD / BNB</div>
+        <div class="price-change up" id="c-bnb">▲ +2.98 (+0.51%)</div>
+        <div class="sparkline"><svg id="s-bnb" viewBox="0 0 200 40" preserveAspectRatio="none"></svg></div>
+        <div class="mcap" id="m-bnb">Kap. tregu: $84B</div>
+      </div>
+      <div class="price-card crypto-card">
+        <div class="card-header"><div><div class="commodity-name">Solana</div><div class="commodity-code">SOL · Solana Network</div></div><div class="commodity-icon">◎</div></div>
+        <div class="price-main" id="p-sol">124</div><div class="price-unit">USD / SOL</div>
+        <div class="price-change dn" id="c-sol">▼ -1.51 (-1.20%)</div>
+        <div class="sparkline"><svg id="s-sol" viewBox="0 0 200 40" preserveAspectRatio="none"></svg></div>
+        <div class="mcap" id="m-sol">Kap. tregu: $58B</div>
+      </div>
+      <div class="price-card crypto-card">
+        <div class="card-header"><div><div class="commodity-name">XRP</div><div class="commodity-code">XRP · Ripple Network</div></div><div class="commodity-icon">🔵</div></div>
+        <div class="price-main" id="p-xrp">2.14</div><div class="price-unit">USD / XRP</div>
+        <div class="price-change up" id="c-xrp">▲ +0.03 (+1.42%)</div>
+        <div class="sparkline"><svg id="s-xrp" viewBox="0 0 200 40" preserveAspectRatio="none"></svg></div>
+        <div class="mcap" id="m-xrp">Kap. tregu: $123B</div>
+      </div>
+      <div class="price-card crypto-card">
+        <div class="card-header"><div><div class="commodity-name">Cardano</div><div class="commodity-code">ADA · Cardano Network</div></div><div class="commodity-icon">🔷</div></div>
+        <div class="price-main" id="p-ada">0.682</div><div class="price-unit">USD / ADA</div>
+        <div class="price-change dn" id="c-ada">▼ -0.008 (-1.16%)</div>
+        <div class="sparkline"><svg id="s-ada" viewBox="0 0 200 40" preserveAspectRatio="none"></svg></div>
+        <div class="mcap" id="m-ada">Kap. tregu: $24B</div>
+      </div>
+    </div>
+
+    <!-- CRYPTO STATS -->
+    <div class="section-label crypto-label">Treguesit e tregut crypto</div>
+    <div class="stats-row crypto-stats">
+      <div class="stat-card"><div class="stat-val" id="cs-mcap">$2.71T</div><div class="stat-label">Kap. total tregu</div></div>
+      <div class="stat-card"><div class="stat-val" id="cs-vol">$98B</div><div class="stat-label">Vol. 24h</div></div>
+      <div class="stat-card"><div class="stat-val" id="cs-dom">60.4%</div><div class="stat-label">Dominimi BTC</div></div>
+      <div class="stat-card"><div class="stat-val">21M</div><div class="stat-label">Max BTC supply</div></div>
+      <div class="stat-card"><div class="stat-val">~19.8M</div><div class="stat-label">BTC në qarkullim</div></div>
+      <div class="stat-card"><div class="stat-val" id="cs-fear">42</div><div class="stat-label">Fear & Greed Index</div></div>
+    </div>
+
+    <!-- OIL REGIONS -->
+    <div class="section-label">Prodhimi rajonal i naftës • mb/d</div>
     <div class="regions-grid">
       <div class="region-card"><div class="region-name">Lindja e Mesme</div><div class="region-countries">Arabia Saudite, EAU, Irak, Iran</div><div class="region-bar-bg"><div class="region-bar" style="width:32%"></div></div><div class="region-pct">32%</div><div class="region-label">34.2 mb/d nga 107 mb/d global</div></div>
       <div class="region-card"><div class="region-name">Shtetet e Bashkuara</div><div class="region-countries">Shale, GoM, Alaskë</div><div class="region-bar-bg"><div class="region-bar" style="width:19%"></div></div><div class="region-pct">19%</div><div class="region-label">20.3 mb/d · Prodhuesi #1 global</div></div>
@@ -130,50 +206,141 @@ footer span{color:var(--amber)}
       <div class="region-card"><div class="region-name">Azia & Paqësori</div><div class="region-countries">Kinë, Australi, Indonezi</div><div class="region-bar-bg"><div class="region-bar" style="width:9%"></div></div><div class="region-pct">9%</div><div class="region-label">9.6 mb/d</div></div>
       <div class="region-card"><div class="region-name">Evropa</div><div class="region-countries">Norvegjia, Britania, Danimarka</div><div class="region-bar-bg"><div class="region-bar" style="width:6%"></div></div><div class="region-pct">6%</div><div class="region-label">6.5 mb/d</div></div>
     </div>
-    <div class="section-label">Treguesit e tregut</div>
+
+    <!-- OIL STATS -->
+    <div class="section-label">Treguesit e tregut të naftës</div>
     <div class="stats-row">
       <div class="stat-card"><div class="stat-val">107.0</div><div class="stat-label">Prodhim global mb/d</div></div>
       <div class="stat-card"><div class="stat-val">105.4</div><div class="stat-label">Kërkesa globale mb/d</div></div>
       <div class="stat-card"><div class="stat-val">$72.1</div><div class="stat-label">Mesatare OPEC+ 2025</div></div>
-      <div class="stat-card"><div class="stat-val">3.82M</div><div class="stat-label">Rezerva USA (barrela)</div></div>
+      <div class="stat-card"><div class="stat-val">3.82M</div><div class="stat-label">Rezerva USA (bb)</div></div>
       <div class="stat-card"><div class="stat-val">+1.6</div><div class="stat-label">Surplus mb/d</div></div>
       <div class="stat-card"><div class="stat-val">$68.5</div><div class="stat-label">Çmimi i thyer OPEC</div></div>
     </div>
+
   </div>
 </main>
 <footer>
   <div class="container">
-    <strong>Burimi i të dhënave:</strong> EIA · IEA · OPEC · ICE · NYMEX &nbsp;|&nbsp; Çmimet mund të jenë me vonesë 15 min &nbsp;|&nbsp; <span>skill.gezimm.com</span>
+    <strong>Burimi i të dhënave:</strong> CoinGecko API · EIA · IEA · OPEC · ICE · NYMEX &nbsp;|&nbsp;
+    Çmimet mund të jenë me vonesë 1-15 min &nbsp;|&nbsp; <span>skill.gezimm.com</span>
   </div>
 </footer>
+
 <script>
-const C=[{id:'brent',base:73.50,vol:.8},{id:'wti',base:69.80,vol:.9},{id:'gas',base:3.42,vol:.06},{id:'htg',base:2.18,vol:.03}];
-const H={};
-C.forEach(c=>{let v=c.base*.96,a=[];for(let i=0;i<20;i++){v+=(Math.random()-.48)*c.vol;a.push(+v.toFixed(3));}a.push(c.base);H[c.id]=a;});
+// ===== OIL DATA =====
+const OIL=[{id:'brent',base:73.50,vol:.8},{id:'wti',base:69.80,vol:.9},{id:'gas',base:3.42,vol:.06},{id:'htg',base:2.18,vol:.03}];
+const OH={};
+OIL.forEach(c=>{let v=c.base*.96,a=[];for(let i=0;i<20;i++){v+=(Math.random()-.48)*c.vol;a.push(+v.toFixed(3));}a.push(c.base);OH[c.id]=a;});
+
+// ===== CRYPTO FALLBACK DATA =====
+const CRYPTO_DEF={
+  btc:{price:83241,change:1.24,mcap:'$1.64T',vol:'$38B'},
+  eth:{price:1842,change:-0.83,mcap:'$221B',vol:'$18B'},
+  bnb:{price:584,change:0.51,mcap:'$84B',vol:'$2.1B'},
+  sol:{price:124,change:-1.20,mcap:'$58B',vol:'$4.8B'},
+  xrp:{price:2.14,change:1.42,mcap:'$123B',vol:'$8.2B'},
+  ada:{price:0.682,change:-1.16,mcap:'$24B',vol:'$0.9B'}
+};
+const CH={};
+Object.entries(CRYPTO_DEF).forEach(([id,d])=>{
+  let v=d.price*(0.97+Math.random()*.03),a=[];
+  for(let i=0;i<20;i++){v+=(Math.random()-.49)*d.price*.008;a.push(+v.toFixed(id==='ada'?4:2));}
+  a.push(d.price);CH[id]=a;
+});
+
+// ===== SPARKLINE =====
 function spark(id,data,up){
-  const s=document.getElementById(id);if(!s)return;
-  const W=200,Ht=40,mn=Math.min(...data)-1,mx=Math.max(...data)+1,r=mx-mn;
-  const pts=data.map((v,i)=>`${(i/(data.length-1))*W},${Ht-((v-mn)/r)*Ht}`).join(' ');
+  const s=document.getElementById('s-'+id);if(!s)return;
+  const W=200,H=40,mn=Math.min(...data)-Math.min(...data)*.005,mx=Math.max(...data)+Math.max(...data)*.005,r=mx-mn||1;
+  const pts=data.map((v,i)=>`${(i/(data.length-1))*W},${H-((v-mn)/r)*H}`).join(' ');
   const cl=up?'#00c97a':'#ff4444';
-  s.innerHTML=`<defs><linearGradient id="g${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${cl}" stop-opacity=".3"/><stop offset="100%" stop-color="${cl}" stop-opacity="0"/></linearGradient></defs><polygon points="${pts} ${W},${Ht} 0,${Ht}" fill="url(#g${id})"/><polyline points="${pts}" fill="none" stroke="${cl}" stroke-width="1.5"/>`;
+  s.innerHTML=`<defs><linearGradient id="g${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${cl}" stop-opacity=".3"/><stop offset="100%" stop-color="${cl}" stop-opacity="0"/></linearGradient></defs><polygon points="${pts} ${W},${H} 0,${H}" fill="url(#g${id})"/><polyline points="${pts}" fill="none" stroke="${cl}" stroke-width="1.5"/>`;
 }
-function upd(){
-  C.forEach(c=>{
-    const old=H[c.id].at(-1),nw=+(old+(Math.random()-.49)*c.vol*.6).toFixed(3);
-    H[c.id].push(nw);if(H[c.id].length>30)H[c.id].shift();
-    const d=nw-old,up=d>=0,pct=(d/old*100),dec=c.id==='gas'||c.id==='htg'?3:2;
-    document.getElementById('p-'+c.id).textContent=nw.toFixed(dec);
+
+// ===== FORMAT PRICE =====
+function fmt(id,v){
+  if(id==='ada'||id==='xrp') return v.toFixed(3);
+  if(id==='gas'||id==='htg') return v.toFixed(3);
+  if(v>1000) return v.toLocaleString('en-US',{maximumFractionDigits:0});
+  return v.toFixed(2);
+}
+
+// ===== UPDATE OIL =====
+function updateOil(){
+  OIL.forEach(c=>{
+    const old=OH[c.id].at(-1),nw=+(old+(Math.random()-.49)*c.vol*.6).toFixed(3);
+    OH[c.id].push(nw);if(OH[c.id].length>30)OH[c.id].shift();
+    const d=nw-old,up=d>=0,pct=(d/old*100),isSmall=c.id==='gas'||c.id==='htg';
+    document.getElementById('p-'+c.id).textContent=nw.toFixed(isSmall?3:2);
     const ce=document.getElementById('c-'+c.id);
-    ce.textContent=`${up?'▲':'▼'} ${up?'+':''}${d.toFixed(dec+1)} (${up?'+':''}${pct.toFixed(2)}%)`;
+    ce.textContent=`${up?'▲':'▼'} ${up?'+':''}${d.toFixed(isSmall?4:2)} (${up?'+':''}${pct.toFixed(2)}%)`;
     ce.className='price-change '+(up?'up':'dn');
-    const tv=document.getElementById('t-'+c.id),tc=document.getElementById('t-'+c.id+'-c');
-    if(tv)tv.textContent='$'+nw.toFixed(dec);
-    if(tc){tc.textContent=`${up?'▲':'▼'}${up?'+':''}${pct.toFixed(2)}%`;tc.className='chg '+(up?'up':'dn');}
-    spark('s-'+c.id,H[c.id],up);
+    const tv=document.getElementById('t-'+c.id);
+    if(tv)tv.textContent='$'+nw.toFixed(isSmall?3:2);
+    spark(c.id,OH[c.id],up);
   });
-  document.getElementById('last-updated').textContent=new Date().toLocaleTimeString('sq-AL');
 }
-upd();setInterval(upd,60000);
+
+// ===== UPDATE CRYPTO FROM API =====
+async function fetchCrypto(){
+  try{
+    const r=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana,ripple,cardano&vs_currencies=usd&include_24hr_change=true&include_market_cap=true',{signal:AbortSignal.timeout(8000)});
+    if(!r.ok)throw new Error('API error');
+    const d=await r.json();
+    const MAP={btc:'bitcoin',eth:'ethereum',bnb:'binancecoin',sol:'solana',xrp:'ripple',ada:'cardano'};
+    document.getElementById('api-status').textContent='● API live';
+    document.getElementById('api-status').className='api-status live';
+    Object.entries(MAP).forEach(([id,key])=>{
+      if(!d[key])return;
+      const price=d[key].usd,chg=d[key].usd_24h_change||0,mcap=d[key].usd_market_cap;
+      updateCryptoCard(id,price,chg,mcap);
+    });
+  }catch(e){
+    document.getElementById('api-status').textContent='● simulim';
+    document.getElementById('api-status').className='api-status sim';
+    simCrypto();
+  }
+}
+
+function updateCryptoCard(id,price,chg,mcap){
+  CH[id].push(price);if(CH[id].length>30)CH[id].shift();
+  const up=chg>=0;
+  const diff=price*(chg/100);
+  document.getElementById('p-'+id).textContent=fmt(id,price);
+  const ce=document.getElementById('c-'+id);
+  ce.textContent=`${up?'▲':'▼'} ${up?'+':''}${Math.abs(diff).toFixed(id==='ada'||id==='xrp'?4:2)} (${up?'+':''}${chg.toFixed(2)}%)`;
+  ce.className='price-change '+(up?'up':'dn');
+  if(mcap){const m=document.getElementById('m-'+id);if(m)m.textContent='Kap. tregu: $'+formatMcap(mcap);}
+  // ticker
+  const tv=document.getElementById('t-'+id);
+  const tc=document.getElementById('t-'+id+'-c');
+  if(tv)tv.textContent='$'+fmt(id,price);
+  if(tc){tc.textContent=`${up?'▲':'▼'}${up?'+':''}${chg.toFixed(2)}%`;tc.className='chg '+(up?'up':'dn');}
+  spark(id,CH[id],up);
+}
+
+function formatMcap(n){if(n>=1e12)return (n/1e12).toFixed(2)+'T';if(n>=1e9)return (n/1e9).toFixed(1)+'B';return (n/1e6).toFixed(0)+'M';}
+
+function simCrypto(){
+  Object.entries(CRYPTO_DEF).forEach(([id,def])=>{
+    const old=CH[id].at(-1),delta=(Math.random()-.49)*def.price*.012,nw=+(old+delta).toFixed(id==='ada'||id==='xrp'?4:2);
+    const chg=(delta/old)*100;
+    updateCryptoCard(id,nw,chg,null);
+  });
+}
+
+// ===== INIT =====
+updateOil();
+Object.keys(CRYPTO_DEF).forEach(id=>spark(id,CH[id],CRYPTO_DEF[id].change>0));
+document.getElementById('last-updated').textContent=new Date().toLocaleTimeString('sq-AL');
+
+fetchCrypto();
+setInterval(()=>{
+  updateOil();
+  document.getElementById('last-updated').textContent=new Date().toLocaleTimeString('sq-AL');
+},60000);
+setInterval(fetchCrypto,120000); // crypto refresh çdo 2 min (CoinGecko limit)
 </script>
 </body>
 </html>
